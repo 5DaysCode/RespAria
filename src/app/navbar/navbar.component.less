@@ -1,8 +1,11 @@
 .navbar {
+  position: relative; // Ensure it has a positioning context
+  z-index: 1000; // A value higher than the sidebar
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #333;
+  height: 60px;
 }
 
 .logo-container {

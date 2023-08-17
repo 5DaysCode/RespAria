@@ -1,0 +1,22 @@
+<button
+  (click)="toggleSideBar()"
+  [attr.aria-label]="isSidebarVisible ? 'Close Sidebar' : 'Open Sidebar'"
+>
+  {{ isSidebarVisible ? "Close Sidebar" : "Open Sidebar" }}
+</button>
+
+<aside
+  [class.visible]="isSidebarVisible"
+  role="complementary"
+  aria-label="Sidebar Menu"
+>
+  <ul>
+    <li><a href="/" aria-label="Navigate to home page">Home</a></li>
+    <li><a href="/users" aria-label="Navigate to users page">Users</a></li>
+    <li>
+      <a href="/register" aria-label="Navigate to registration page"
+        >Register</a
+      >
+    </li>
+  </ul>
+</aside>
