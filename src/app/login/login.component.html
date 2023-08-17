@@ -1,0 +1,35 @@
+<div class="login-container" role="form" aria-labelledby="loginHeading">
+  <h2 id="loginHeading">Login</h2>
+
+  <form (submit)="onSubmit()">
+    <div class="input-group">
+      <label for="username" aria-required="true">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        required
+        aria-describedby="usernameDesc"
+        aria-invalid="false"
+      />
+      <p id="usernameDesc" class="hidden">Enter your username.</p>
+    </div>
+
+    <div class="input-group">
+      <label for="password" aria-required="true">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        aria-describedby="passwordDesc"
+        aria-invalid="false"
+      />
+      <p id="passwordDesc" class="hidden">Enter your password.</p>
+    </div>
+
+    <button type="submit" aria-busy="false">Login</button>
+    <!--Error message area-->
+    <div aria-live="assertive" class="hiden" id="errorMessage"></div>
+  </form>
+</div>
