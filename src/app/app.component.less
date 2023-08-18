@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.page-container {
+  flex: 1;
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+
+  width: 100%;
+  padding-top: 60px; // Adjust this padding depending on the height of your navbar. This ensures that content starts beneath the navbar.
+}

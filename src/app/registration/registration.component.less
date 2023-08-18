@@ -1,0 +1,24 @@
+@import "src/app/styles/variables.less";
+
+section {
+  color: @text-color;
+  margin: 0 auto;
+  width: 30%;
+  display: block;
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input,
+    button {
+      width: 100%;
+    }
+  }
+
+  button {
+    background-color: @primary-color;
+    color: @secondary-color;
+  }
+}

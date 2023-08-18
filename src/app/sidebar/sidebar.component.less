@@ -5,14 +5,33 @@ aside {
   width: 250px; // Adjust as needed.
   height: 100vh;
   background-color: #f7f7f7;
-  transition: transform 0.3s;
+  transition: transform 0.5s ease-in-out;
   transform: translateX(
     -100%
   ); // Initially hide it by moving it off-screen to the left
   z-index: 1000;
 
+  // This is the pseudo-element to create a shadowed background.
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 69, 0, 0.1);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: -1;
+  }
+
   &.visible {
     transform: translateX(0); // Bring it into view when it's visible
+
+    &::before {
+      opacity: 1; // Fade in when the sidebar is visible.
+    }
   }
 
   ul {

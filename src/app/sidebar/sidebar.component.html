@@ -12,10 +12,27 @@
   [attr.aria-expanded]="isSidebarVisible"
 >
   <ul>
-    <li><a href="/" aria-label="Navigate to home page">Home</a></li>
-    <li><a href="/users" aria-label="Navigate to users page">Users</a></li>
     <li>
-      <a href="/register" aria-label="Navigate to registration page"
+      <a
+        routerLink="/home"
+        (click)="toggleSideBar()"
+        aria-label="Navigate to home page"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/users"
+        (click)="toggleSideBar()"
+        aria-label="Navigate to users page"
+        >Users</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/registration"
+        (click)="toggleSideBar()"
+        aria-label="Navigate to registration page"
         >Register</a
       >
     </li>
